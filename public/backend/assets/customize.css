@@ -1,0 +1,11 @@
+
+table.table-bordered tbody td {
+    border-bottom-width: 0;
+    padding: 5px 10px;
+    vertical-align: middle !important;
+}
+
+.active > i {
+    color: #fff !important;
+}
+

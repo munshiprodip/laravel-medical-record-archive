@@ -20,7 +20,7 @@ class WardController extends Controller
 
     public function apiWard()
     {
-        $data = DB::table('wards')->get();
+        $data = Wards::all();
 
         return Datatables::of($data)->addColumn('action',function ($data){
             return '<div class="btn-group">
@@ -45,15 +45,7 @@ class WardController extends Controller
         return view('backend.ward.ward');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+  
 
     /**
      * Store a newly created resource in storage.
@@ -81,16 +73,6 @@ class WardController extends Controller
         ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
